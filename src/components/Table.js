@@ -5,13 +5,14 @@ const TableHeader = () => {
   return (
     <thead>
       <tr>
-        <th>Name</th>
+        <th>Name</th> 
         <th>URL</th>
         <th>Remove</th>
       </tr>
     </thead>
   )
 }
+
 
 const TableBody = (props) => {
   // boilerplate table body functional component
@@ -35,7 +36,21 @@ const TableBody = (props) => {
 
 const Table = (props) => {
   {
+    console.log(props)
     /*TODO - return <table> component, TableHeader and TableBody  and pass props!*/
+    return (
+      <table>
+        <TableHeader />
+        <TableBody linkData={props.info} removeLink={props.deleteFunc}/>
+      </table>
+      
+    
+      //<TableBody tInfo={props}/> 
+
+      //TableHeader
+      // TableBody
+      //TableBody(props)
+    )
   }
 }
 
